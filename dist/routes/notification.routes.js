@@ -4,10 +4,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const dotenv_1 = __importDefault(require("dotenv"));
-dotenv_1.default.config();
-const app = (0, express_1.default)();
-const port = process.env.PORT || 9000;
-app.listen(port, () => {
-    console.log(`Express server is listing on port ${port}`);
-});
+const notification_route_1 = require("../controllers/notification.route");
+const notificationRouter = express_1.default.Router();
+notificationRouter.post("/send", notification_route_1.notificationSendRouterController);
