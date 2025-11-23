@@ -4,3 +4,5 @@ import { notificationSendRouterController } from "../controllers/notification.ro
 const notificationRouter = express.Router();
 
 notificationRouter.post("/send", notificationSendRouterController);
+
+export default notificationRouter;

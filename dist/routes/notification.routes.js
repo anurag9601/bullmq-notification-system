@@ -7,3 +7,4 @@ const express_1 = __importDefault(require("express"));
 const notification_route_1 = require("../controllers/notification.route");
 const notificationRouter = express_1.default.Router();
 notificationRouter.post("/send", notification_route_1.notificationSendRouterController);
+exports.default = notificationRouter;
